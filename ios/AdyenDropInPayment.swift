@@ -59,7 +59,7 @@ extension AdyenDropInPayment: DropInComponentDelegate {
        let card = CardEncryptor.Card(number: cardNumber,
                                      securityCode: securityCode,
                                      expiryMonth:  String(expiryMonth),
-                                     expiryYear: "20" + String(expiryYear))
+                                     expiryYear: String(expiryYear))
      let encryptedCard = CardEncryptor.encryptedCard(for: card, publicKey: self.publicKey!)
      
      let resultMap:Dictionary? = [
